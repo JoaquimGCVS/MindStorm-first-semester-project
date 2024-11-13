@@ -18,4 +18,5 @@ A means to empower everyone to reach their fullest potential, utilizing resource
 ## Usage instructions:
 
 1- Clone the repository: 
+```sh
 https://github.com/JoaquimGCVS/MindStorm-first-semester-project.git
