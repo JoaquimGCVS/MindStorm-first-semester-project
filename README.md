@@ -1,8 +1,8 @@
 ## MindStorm
 
-Uma forma de ajudar a todas a atingir seu máximo potencial, com recursos que são disponibilizados em nosso software.
+A means to empower everyone to reach their fullest potential, utilizing resources made available through our software.
 
-## Alunos integrantes da equipe
+## Participating students:
 
 * Gabriel Lima
 * Arlindo Sergio
@@ -10,11 +10,12 @@ Uma forma de ajudar a todas a atingir seu máximo potencial, com recursos que s�
 * Joaquim Guilherme
 * Vinícius Senna
 
-## Professores responsáveis
+## Responsible professors:
 
 * Prof. Rommel Vieira Carneiro
 * Prof. Simone Alves Nogueira
 
-## Instruções de utilização
+## Usage instructions:
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+1- Clone the repository: 
+https://github.com/JoaquimGCVS/MindStorm-first-semester-project.git
