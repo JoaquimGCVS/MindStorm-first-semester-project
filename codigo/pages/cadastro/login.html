@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <div class="tela-login">
+        <div class="card">
+            <h1>LOGIN</h1>
+            <form class="textfield" id="login-form">
+                <label for="login-email">E-mail</label>
+                <input type="email" name="email" placeholder="E-mail" id="login-email" required>
+                <label for="login-senha">Senha</label>
+
+                <div class="password-container">
+                    <input type="password" id="password" class="textfield" placeholder="Senha">
+                    <span class="toggle-password" id="toggle-password">&#128065;</span>
+                </div>
+
+                <button class="btn-login" type="submit">ENTRAR</button>
+                <p id="btn-cadastre"><a href="../cadastro/cadastro.html">Cadastre-se</a></p>
+            </form>
+        </div>
+    </div>
+     
+    <script>
+        document.getElementById('toggle-password').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+
+    // Muda o ícone entre o olho aberto e fechado
+    this.textContent = type === 'password' ? '\u{1F441}' : '\u{1F441}\u{FE0E}'; // Olho com barra (fechado) e olho (aberto)
+});
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('login-email').value.trim();
+        const senha = document.getElementById('password').value.trim();
+
+        // Verifica se os campos não estão vazios
+        if (email === "" || senha === "") {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        // Busca os dados dos clientes cadastrados
+        fetch('/api/clientes')
+            .then(response => response.json())
+            .then(clientes => {
+                const clienteEncontrado = clientes.find(cliente => cliente.email === email && cliente.senha === senha);
+                
+                if (clienteEncontrado) {
+                    alert('Login bem-sucedido!');
+                    window.location.href = '../dashboard/dashboard.html';  // Redireciona para a página inicial
+                } else {
+                    alert('E-mail ou senha incorretos.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao buscar clientes:', error);
+                alert('Erro ao verificar login.');
+            });
+    });
+    </script>
+</body>
+</html>

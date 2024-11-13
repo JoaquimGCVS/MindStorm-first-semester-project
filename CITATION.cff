@@ -1,0 +1,29 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: MindStorm
+authors:
+  - family-names: Pereira Junior
+    given-names: Arlindo Sergio
+  - family-names: de Carvalho Vilela Silva
+    given-names: Joaquim Guilherme
+  - family-names: Sena Pimenta de Figueiredo
+    given-names: Vinicius Gabriel 
+  - family-names: Pazzutti da Silva
+    given-names: Arthur Bernardo 
+  - family-names: Lima Batista Siqueira
+    given-names: Gabriel 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Carneiro
+    given-names: Rommel Vieira
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Nogueira
+    given-names: Simone Alves 
+keywords:
+  - TDAH
+  - Neurodivergencia
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-inclusao-de-neurodivergentes-tdah.git
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2022-07-14
